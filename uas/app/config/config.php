@@ -1,4 +1,3 @@
-<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,4 +9,4 @@
     <p>test</p>
 </body>
 </html>
-?>
+<!-- okokok -->
