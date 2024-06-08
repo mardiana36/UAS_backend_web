@@ -23,7 +23,10 @@
     <link href="app/views/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
     <link href="app/views/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <style>
-        
+        .dataTables_length label,.dataTables_filter label {
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 

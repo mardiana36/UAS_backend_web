@@ -24,10 +24,10 @@
     <div class="nav-header">
         <div class="brand-logo">
             <a href="index.html">
-                <b class="logo-abbr"><img src="images/logo.png" alt=""> </b>
-                <span class="logo-compact"><img src="./images/logo-compact.png" alt=""></span>
+                <b class="logo-abbr"><img src="" alt=""> </b>
+                <span class="logo-compact"><img src="" alt=""></span>
                 <span class="brand-title">
-                    <img src="images/logo-text.png" alt="">
+                    <img src="" alt="">
                 </span>
             </a>
         </div>
@@ -75,7 +75,7 @@
                                 <ul>
                                     <li class="notification-unread">
                                         <a href="javascript:void()">
-                                            <img class="float-left mr-3 avatar-img" src="images/avatar/1.jpg" alt="">
+                                            <img class="float-left mr-3 avatar-img" src="app/views/assets/images/avatar/1.jpg" alt="">
                                             <div class="notification-content">
                                                 <div class="notification-heading">Saiful Islam</div>
                                                 <div class="notification-timestamp">08 Hours ago</div>
@@ -85,7 +85,7 @@
                                     </li>
                                     <li class="notification-unread">
                                         <a href="javascript:void()">
-                                            <img class="float-left mr-3 avatar-img" src="images/avatar/2.jpg" alt="">
+                                            <img class="float-left mr-3 avatar-img" src="app/views/assets/images/avatar/2.jpg" alt="">
                                             <div class="notification-content">
                                                 <div class="notification-heading">Adam Smith</div>
                                                 <div class="notification-timestamp">08 Hours ago</div>
@@ -95,7 +95,7 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void()">
-                                            <img class="float-left mr-3 avatar-img" src="images/avatar/3.jpg" alt="">
+                                            <img class="float-left mr-3 avatar-img" src="app/views/assets/images/avatar/3.jpg" alt="">
                                             <div class="notification-content">
                                                 <div class="notification-heading">Barak Obama</div>
                                                 <div class="notification-timestamp">08 Hours ago</div>
@@ -105,7 +105,7 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void()">
-                                            <img class="float-left mr-3 avatar-img" src="images/avatar/4.jpg" alt="">
+                                            <img class="float-left mr-3 avatar-img" src="app/views/assets/images/avatar/4.jpg" alt="">
                                             <div class="notification-content">
                                                 <div class="notification-heading">Hilari Clinton</div>
                                                 <div class="notification-timestamp">08 Hours ago</div>
@@ -186,7 +186,7 @@
                     <li class="icons dropdown">
                         <div class="user-img c-pointer position-relative" data-toggle="dropdown">
                             <span class="activity active"></span>
-                            <img src="images/user/1.png" height="40" width="40" alt="">
+                            <img src="app/views/assets/images/user/1.png" height="40" width="40" alt="">
                         </div>
                         <div class="drop-down dropdown-profile   dropdown-menu">
                             <div class="dropdown-content-body">
@@ -233,38 +233,47 @@
                 <li class="nav-label">Apps</li>
                     <li>
                         <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Mahasiswa</span>
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">User</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="index.php?action=<?=$m?>">Tabel Mahasiswa</a></li>
-                            <li><a href="index.php?action=<?=$mC?>">Tambah Mahasiswa</a></li>
+                            <li><a href="index.php?action=rUser">User</a></li>
+                            <li><a href="index.php?action=">Add User</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Prodi</span>
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Guest</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="index.php?action=<?=$p?>">Tabel Prodi</a></li>
-                            <li><a href="index.php?action=<?=$pC?>">Tambah Prodi</a></li>
+                            <li><a href="index.php?action=rTamu">Guest</a></li>
+                            <li><a href="index.php?action">Add Guest</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Matakuliah</span>
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Payment</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="index.php?action=<?=$mk?>">Tabel Matakuliah</a></li>
-                            <li><a href="index.php?action=<?=$mkC?>">Tambah Matakuliah</a></li>
+                            <li><a href="index.php?action=rPembayaran">Payment</a></li>
+                            <li><a href="index.php?action=">Add Payment</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Nilai</span>
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Reservation</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="index.php?action=<?=$nl?>">Tabel Nilai</a></li>
-                            <li><a href="index.php?action=<?=$nlC?>">Tambah Nilai</a></li>
+                            <li><a href="index.php?action=rPemesanan">Reservation</a></li>
+                            <li><a href="index.php?action=">Add Reservation</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Room</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="index.php?action=rInfokamar">Room</a></li>
+                            <li><a href="index.php?action=">Add Room</a></li>
                         </ul>
                     </li>
             </ul>
