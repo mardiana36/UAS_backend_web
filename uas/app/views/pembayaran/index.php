@@ -14,6 +14,7 @@
                                 <thead>
                                     <tr class="gradient-1" style="text-wrap: nowrap">
                                         <th>Number</th>
+                                        <th>Reservation Code</th>
                                         <th>Payment Method</th>
                                         <th>Payment Date</th>
                                         <th>Status</th>
@@ -42,6 +43,7 @@
                                 <tfoot>
                                     <tr>
                                         <th>Number</th>
+                                        <th>Reservation Code</th>
                                         <th>Payment Method</th>
                                         <th>Payment Date</th>
                                         <th>Status</th>

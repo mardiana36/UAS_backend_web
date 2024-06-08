@@ -18,9 +18,9 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                              <h4 class="card-title">Add Room</h4>
+                              <h4 class="card-title">Update Room</h4>
                                 <div class="form-validation">
-                                    <form class="" action="index.php?action=cInfokamar" method="post" enctype="multipart/form-data">
+                                    <form class="" action="index.php?action=uInfokamar" method="post" enctype="multipart/form-data">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
                                             </label>
@@ -33,7 +33,7 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="tipe" name="tipe" required>
-                                                    <option value="" hidden>Pilih...</option>
+                                                    <option value="" hidden>Choose...</option>
                                                     <option value="1">Single</option>
                                                     <option value="2">Double</option>
                                                     <option value="3">Suite</option>
@@ -41,11 +41,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="harga">Price<span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="number" class="form-control" id="harga" name="harga" placeholder="Input Room Price..." required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="status">Status<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="status" name="status" required>
-                                                    <option value="" hidden>Pilih...</option>
+                                                    <option value="" hidden>Choose...</option>
                                                     <option value="AV">Available</option>
                                                     <option value="OC">Occupied</option>
                                                     <option value="MA">Maintenance</option>
