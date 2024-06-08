@@ -20,7 +20,7 @@
                             <div class="card-body">
                               <h4 class="card-title">Add Room</h4>
                                 <div class="form-validation">
-                                    <form class="" action="index.php?action=uInfokamar" method="post" enctype="multipart/form-data">
+                                    <form class="" action="index.php?action=cInfokamar" method="post" enctype="multipart/form-data">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
                                             </label>
