@@ -237,7 +237,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="index.php?action=rUser">User</a></li>
-                            <li><a href="index.php?action=">Add User</a></li>
+                            <li><a href="index.php?action=cUser">Add User</a></li>
                         </ul>
                     </li>
                     <li>
@@ -246,7 +246,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="index.php?action=rTamu">Guest</a></li>
-                            <li><a href="index.php?action">Add Guest</a></li>
+                            <li><a href="index.php?action=cTamu">Add Guest</a></li>
                         </ul>
                     </li>
                     <li>
@@ -255,7 +255,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="index.php?action=rPembayaran">Payment</a></li>
-                            <li><a href="index.php?action=">Add Payment</a></li>
+                            <li><a href="index.php?action=cPembayaran">Add Payment</a></li>
                         </ul>
                     </li>
                     <li>
@@ -264,7 +264,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="index.php?action=rPemesanan">Reservation</a></li>
-                            <li><a href="index.php?action=">Add Reservation</a></li>
+                            <li><a href="index.php?action=cPemesanan">Add Reservation</a></li>
                         </ul>
                     </li>
                     <li>
@@ -273,7 +273,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="index.php?action=rInfokamar">Room</a></li>
-                            <li><a href="index.php?action=">Add Room</a></li>
+                            <li><a href="index.php?action=cInfokamar">Add Room</a></li>
                         </ul>
                     </li>
             </ul>
