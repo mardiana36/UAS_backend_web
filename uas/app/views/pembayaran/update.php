@@ -22,18 +22,11 @@
                                 <div class="form-validation">
                                     <form class="" action="index.php?action=uPembayaran" method="post">
                                         <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="nomor" name="nomor" placeholder="Input The Room Number..." required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-lg-4 col-form-label" for="reservationCode">Room Tipe<span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label" for="reservationCode">Reservation Code<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="pemesanan_id" name="pemesanan_id" required>
-                                                    <option value="" hidden>Pilih...</option>
+                                                    <option value="" hidden>Choose...</option>
                                                     <option value="">Reservation Code</option>
                                                 </select>
                                             </div>
@@ -43,7 +36,7 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="metodePembayaran" name="metodePembayaran" required>
-                                                    <option value="" hidden>Pilih...</option>
+                                                    <option value="" hidden>Choose...</option>
                                                     <option value="CC">Credit Card</option>
                                                     <option value="BT">Bank Transfer</option>
                                                     <option value="CS">Cash</option>
@@ -51,11 +44,18 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="tglPembayaran">Payment Date<span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input type="date" class="form-control" id="tglPembayaran" name="tglPembayaran" placeholder="Input Payment Date..." required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="status">Status<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="status" name="status" required>
-                                                    <option value="" hidden>Pilih...</option>
+                                                    <option value="" hidden>Choose...</option>
                                                     <option value="PA">Paid</option>
                                                     <option value="PE">Pending</option>
                                                     <option value="FA">Failed</option>

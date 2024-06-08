@@ -29,6 +29,7 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
+                                        <td></td>
                                         <td>
                                             <span>
                                                 <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Edit">
