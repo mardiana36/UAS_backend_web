@@ -27,6 +27,9 @@
             display: flex;
             align-items: center;
         }
+        .content-body{
+            margin-top: 20px;
+        }
     </style>
 </head>
 
