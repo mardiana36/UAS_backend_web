@@ -17,14 +17,18 @@
                                         <th>Guest Name</th>
                                         <th>Reservation Kode</th>
                                         <th>Room Number</th>
-                                        <th>Check-out</th>
                                         <th>Check-in</th>
+                                        <th>Check-out</th>
                                         <th>Status</th>
                                         <th>Price</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -44,11 +48,14 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>Number</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone Number</th>
-                                        <th>Address</th>
+                                    <th>Number</th>
+                                        <th>Guest Name</th>
+                                        <th>Reservation Kode</th>
+                                        <th>Room Number</th>
+                                        <th>Check-out</th>
+                                        <th>Check-in</th>
+                                        <th>Status</th>
+                                        <th>Price</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
