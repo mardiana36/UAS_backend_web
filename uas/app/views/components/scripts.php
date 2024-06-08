@@ -36,7 +36,7 @@
              transitionEffect: "slideLeft",
              autoFocus: true,
              labels: {
-                 finish: "Tambah"
+                 finish: "Submit"
              },
              onStepChanging: function(event, currentIndex, newIndex) {
                  formS.validate().settings.ignore = ":disabled,:hidden";
@@ -55,6 +55,10 @@
              weekStart: 0,
              time: false
          });
+         $('#mdate2').bootstrapMaterialDatePicker({
+        weekStart: 0,
+        time: false
+    });
      });
  </script>
 
