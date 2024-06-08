@@ -12,7 +12,7 @@
                             <div class="card-body">
                               <h4 class="card-title">Update Payment</h4>
                                 <div class="form-validation">
-                                    <form class="" action="index.php?action=uPembayaran" method="post">
+                                    <form class="" action="index.php?action=uPembayaran&id="  method="post">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="reservationCode">Reservation Code<span class="text-danger">*</span>
                                             </label>

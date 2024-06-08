@@ -4,7 +4,6 @@
 <div class="content-body">
 
     <!-- row -->
-
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -12,7 +11,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Add Room</h4>
                         <div class="form-validation">
-                            <form class="" action="index.php?action=uInfokamar" method="post" enctype="multipart/form-data">
+                            <form class="" action="index.php?action=cInfokamar&id=" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
                                     </label>
