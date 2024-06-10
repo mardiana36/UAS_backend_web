@@ -23,12 +23,61 @@
     <link href="app/views/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
     <link href="app/views/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <style>
-        .dataTables_length label,.dataTables_filter label {
+        .dataTables_length label,
+        .dataTables_filter label {
             display: flex;
             align-items: center;
         }
-        .content-body{
+
+        .content-body {
             margin-top: 20px;
+        }
+
+        #login input {
+            border: none;
+        }
+        #login .form-group{
+            position: relative;
+            overflow: hidden;
+        }
+        #login .form-group::after{
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            content: "";
+            min-width: 300px;
+            min-height: 2px;
+            background-color: #7571F9;
+            animation: login infinite 3s ease-in-out;
+        }
+
+        @keyframes login {
+            0%{
+               left: -10%;
+            }
+            50%{
+               left: 60%;
+            }
+            100%{
+                left: -10%;
+            }
+        }
+
+        #icon-Password1,
+        #icon-Password2 {
+            font-size: 25px;
+            color: #7571F9;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #contentPassword {
+            position: relative;
+        }
+
+        #headLogin h2 {
+            color: #7571F9;
         }
     </style>
 </head>
