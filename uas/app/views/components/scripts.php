@@ -6,6 +6,7 @@
  <script src="app/views/assets/js/settings.js"></script>
  <script src="app/views/assets/js/gleek.js"></script>
  <script src="app/views/assets/js/styleSwitcher.js"></script>
+ <script src="app/views/assets/js/calendar.js"></script>
 
  <script src="app/views/assets/plugins/tables/js/jquery.dataTables.min.js"></script>
  <script src="app/views/assets/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
