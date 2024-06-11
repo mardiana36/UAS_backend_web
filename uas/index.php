@@ -114,6 +114,13 @@ switch ($action) {
         require "app/views/pemesanan/update.php";
        require "app/views/components/footers.php";
         break;
+    case "dashboard":
+        $_SESSION['page'] = "Dashboard";
+        require "app/views/components/headers.php";
+        require "app/views/components/navbars.php";
+        require "app/views/dashboard/dashboard.php";
+        require "app/views/components/footers.php";
+        break;
     case "dTamu":
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
@@ -137,7 +144,7 @@ switch ($action) {
     case "dPemesanan":
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-       require "app/views/components/footers.php";
+        require "app/views/components/footers.php";
         break;
     default:
         $_SESSION['page'] = "Login";
