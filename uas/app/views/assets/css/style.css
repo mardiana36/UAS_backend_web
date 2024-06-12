@@ -2213,11 +2213,13 @@ textarea.form-control {
 .form-text {
   display: block;
   margin-top: 0.25rem;
-  
+
 }
-.text-wrap{
+
+.text-wrap {
   text-wrap: nowrap;
 }
+
 .form-row {
   display: flex;
   flex-wrap: wrap;
