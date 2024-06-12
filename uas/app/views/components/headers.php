@@ -32,7 +32,11 @@
         .content-body {
             margin-top: 20px;
         }
-
+        #rowLogin{
+            box-shadow: 0 0 5px 5px #fff;
+            border-radius: 20px;
+            position: unset;
+        }
         #login input {
             border: none;
         }
@@ -78,6 +82,42 @@
 
         #headLogin h2 {
             color: #7571F9;
+        }
+
+        #containerLogin{
+            position: relative;
+            background: #7571F9;
+            min-height: 100vh;
+            min-width: 100vw;
+            align-items: center;
+        }
+        #containerLogin::after{
+            content: "1";
+            position: absolute;
+            width: 300px;
+            height:300px;
+            background-color: rgb(255, 255, 255,0.4);
+            top: 0;
+            border-radius: 100%;
+        }
+        #containerLogin::after:last-child{
+            content: "2";
+            position: absolute;
+            width: 300px;
+            height:300px;
+            background-color: rgb(255, 255, 255,0.4);
+            bottom: 0;
+            border-radius: 100%;
+        }
+        #containerLogin::before{
+            content: "3";
+            position: absolute;
+            width: 300px;
+            height:300px;
+            background-color: rgb(255, 255, 255,0.4);
+            top: 0;
+            right: 0;
+            border-radius: 100%;
         }
     </style>
 </head>
