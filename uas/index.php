@@ -146,6 +146,12 @@ switch ($action) {
         require "app/views/components/navbars.php";
         require "app/views/components/footers.php";
         break;
+    case "dashboard":
+        require "app/views/components/headers.php";
+        require "app/views/components/navbars.php";
+        require "app/views/dashboard/dashboard.php";
+        require "app/views/components/footers.php";
+        break;
     default:
         $_SESSION['page'] = "Login";
         require "app/views/components/headers.php";

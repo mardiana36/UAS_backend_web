@@ -1,0 +1,158 @@
+.dataTables_length label,
+.dataTables_filter label {
+    display: flex;
+    align-items: center;
+}
+
+.content-body {
+    margin-top: 20px;
+}
+
+#rowLogin {
+    border-radius: 20px;
+    position: unset;
+
+}
+
+#containerL::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    min-width: 100vw;
+    min-height: 100vh;
+    backdrop-filter: blur(0px);
+}
+
+#containerL:hover::before {
+    backdrop-filter: blur(3px);
+}
+
+#login input {
+    border: none;
+}
+
+#login .form-group {
+    position: relative;
+    overflow: hidden;
+}
+
+#login .form-group::after {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    content: "";
+    min-width: 300px;
+    min-height: 2px;
+    background-color: #7571F9;
+    animation: login infinite 3s ease-in-out;
+}
+
+@keyframes login {
+    0% {
+        left: -10%;
+    }
+
+    50% {
+        left: 60%;
+    }
+
+    100% {
+        left: -10%;
+    }
+}
+
+#icon-Password1,
+#icon-Password2 {
+    font-size: 25px;
+    color: #7571F9;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#contentPassword {
+    position: relative;
+}
+
+#headLogin h2 {
+    color: #7571F9;
+}
+
+#containerLogin {
+    position: relative;
+    background: #7571F9;
+    min-height: 100vh;
+    min-width: 100vw;
+    align-items: center;
+    overflow: hidden;
+}
+
+#containerLogin .ball {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.175);
+    bottom: 0;
+    border-radius: 100%;
+    box-shadow: 0 0 50px #3c3a7f30;
+}
+
+#containerLogin .ball:nth-child(1) {
+    top: -10%;
+    left: -10%;
+
+}
+
+#containerLogin .ball:nth-child(2) {
+    width: 300px;
+    height: 300px;
+    top: -5%;
+    left: -5%;
+}
+
+#containerLogin .ball:nth-child(3) {
+    bottom: -10%;
+    right: -10%;
+
+}
+
+#containerLogin .ball:nth-child(4) {
+    width: 300px;
+    height: 300px;
+    bottom: -5%;
+    right: -5%;
+
+}
+
+#containerLogin .ball:nth-child(5) {
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+    left: 0;
+
+}
+
+#containerLogin .ball:nth-child(6) {
+    width: 800px;
+    height: 400px;
+    top: -25%;
+    right: 15%;
+
+}
+
+#containerLogin .ball:nth-child(7) {
+    width: 250px;
+    height: 250px;
+    top: 0;
+    right: 0;
+
+}
+
+#containerLogin .ball:nth-child(8) {
+    width: 800px;
+    height: 400px;
+    bottom: -25%;
+    left: 15%;
+
+}

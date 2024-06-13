@@ -1,6 +1,7 @@
  <!--**********************************
         Scripts
     ***********************************-->
+
  <script src="app/views/assets/plugins/common/common.min.js"></script>
  <script src="app/views/assets/js/custom.min.js"></script>
  <script src="app/views/assets/js/settings.js"></script>
@@ -24,6 +25,7 @@
 
  <script>
      $(document).ready(function() {
+
          var formS = $("#step-form-horizontal");
          formS.validate({
              errorPlacement: function errorPlacement(error, element) {
@@ -57,11 +59,12 @@
              time: false
          });
          $('#mdate2').bootstrapMaterialDatePicker({
-        weekStart: 0,
-        time: false
-    });
+             weekStart: 0,
+             time: false
+         });
      });
  </script>
+
 
  <script src="app/views/assets/plugins/validation/jquery.validate.min.js"></script>
  <script src="app/views/assets/plugins/validation/jquery.validate-init.js"></script>
