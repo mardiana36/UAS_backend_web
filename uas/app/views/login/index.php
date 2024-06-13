@@ -1,6 +1,14 @@
 <section style="min-height: 100vh;">
-    <div class="login-form-bg h-100" id="containerLogin" >
-        <div class="container h-100">
+    <div class="login-form-bg h-100" id="containerLogin">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="container h-100" id="containerL">
             <div class="row justify-content-center h-100" style="align-items: center; min-height: 100vh;">
                 <div class="col-xl-6">
                     <div class="form-input-content">
@@ -28,3 +36,4 @@
         </div>
     </div>
 </section>
+<script src="app/views/assets/js/login.js"></script>

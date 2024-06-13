@@ -14,7 +14,7 @@
         Main wrapper end
     ***********************************-->
 <?php
-require "app/views/components/scripts.php"
+include "app/views/components/scripts.php"
 
 ?>
  

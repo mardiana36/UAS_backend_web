@@ -226,7 +226,7 @@
             <ul class="metismenu" id="menu">
                 <li class="nav-label">Dashboard</li>
                 <li>
-                    <a href="index.php" >
+                    <a href="index.php?action=dashboard" >
                         <i class="icon-speedometer"></i><span class="nav-text">Dashboard</span>
                     </a>
                 </li>
