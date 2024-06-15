@@ -24,6 +24,7 @@
     <link href="app/views/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
     <link href="app/views/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="app/views/assets/css/styleCustom.css" rel="stylesheet">
+    <link href="app/views/assets/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
 </head>
 
 <body>

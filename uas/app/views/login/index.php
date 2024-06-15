@@ -17,17 +17,16 @@
                                 <a class="text-center" id="headLogin" href="">
                                     <h2>Booking</h2>
                                 </a>
-                                <form class="mt-5 mb-5" id="login">
+                                <form class="mt-5 mb-5" id="login" method="post" action="index.php">
                                     <div class="form-group">
-                                        <input type="email" name="usernameOrEmail" class="form-control" placeholder="Email" required>
+                                        <input type="text" name="usernameOrEmail" class="form-control" placeholder="Username/Email" required>
                                     </div>
                                     <div class="form-group" id="contentPassword">
                                         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                                         <i class="icon-lock" id="icon-Password1"></i>
                                     </div>
-                                    <button class="btn login-form__btn submit w-100">Sign In</button>
+                                    <button class="btn login-form__btn submit w-100 sweet-wrong">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Dont have account? <a href="index.php?action=regis" class="text-primary">Sign Up</a> now</p>
                             </div>
                         </div>
                     </div>
@@ -36,4 +35,6 @@
         </div>
     </div>
 </section>
+<script src="app/views/assets/plugins/sweetalert/js/sweetalert.min.js"></script>
 <script src="app/views/assets/js/login.js"></script>
+<script>showSweetAlert('Oops...', 'The email/username or password you entered is incorrect!!!', 'error');</script>

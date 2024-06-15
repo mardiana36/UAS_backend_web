@@ -65,6 +65,5 @@
      });
  </script>
 
-
  <script src="app/views/assets/plugins/validation/jquery.validate.min.js"></script>
  <script src="app/views/assets/plugins/validation/jquery.validate-init.js"></script>
