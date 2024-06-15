@@ -70,7 +70,7 @@ class tamu {
         return false;
     }
 
-    public function deleteKamar($id) {
+    public function deleteTamu($id) {
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
         $stmt = $this->conn->prepare($query);
         $id = htmlspecialchars(strip_tags($id));
