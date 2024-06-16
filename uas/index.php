@@ -92,7 +92,7 @@ switch ($action) {
     case "cPembayaran":
         $_SESSION['page'] = "Add Payment";
         require "app/views/components/headers.php";
-        // require "app/views/components/navbars.php";
+        require "app/views/components/navbars.php";
         $pembayaranController->create($pemesananController->get());
         require "app/views/components/footers.php";
         break;

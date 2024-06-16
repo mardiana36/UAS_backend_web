@@ -14,28 +14,11 @@ class dashboardController {
     }
 
         public function getDashboardData() {
-        $query = "
-            SELECT 
-                t.nama AS guest, 
-                p.tglCheckin AS checkin, 
-                p.tglCheckout AS checkout, 
-                p.status AS reservation, 
-                COALESCE(pb.status, 'N/A') AS payment
-            FROM 
-                pemesanan p
-            LEFT JOIN 
-                tamu t ON p.tamu_id = t.id
-            LEFT JOIN 
-                pembayaran pb ON p.id = pb.pemesanan_id
-        ";
-
+        $query = "SELECT t.id,t.nama,pm.kodeReservasi,pm.tglCheckin,pm.tglCheckout, pm.status, pb.status as pembayaran_status FROM tamu t INNER JOIN pemesanan pm INNER JOIN pembayaran pb WHERE t.id = pm.tamu_id AND pm.id = pb.pemesanan_id;";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
 
-        $data = [];
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $data[] = $row;
-        }
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $queryGuest = "SELECT COUNT(*) AS total_guest FROM tamu";
         $stmtGuest = $this->db->prepare($queryGuest);
