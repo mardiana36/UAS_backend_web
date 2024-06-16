@@ -87,9 +87,10 @@
                                     <thead>
                                         <tr>
                                             <th>Guest</th>
+                                            <th>Reservation Number</th>
                                             <th>Checkin</th>
                                             <th>Checkout</th>
-                                            <th>Reservation</th>
+                                            <th>Status Reservation</th>
                                             <th>Payment</th>
                                         </tr>
                                     </thead>
@@ -100,11 +101,12 @@
                                       ?>
                                           <?php foreach ($data as $ds) : ?>
                                               <tr>
-                                                  <td><?= $ds['guest'] ?></td>
-                                                  <td><?= $ds['checkin'] ?></td>
-                                                  <td><?= $ds['checkout'] ?></td>
-                                                  <td><?= $ds['reservation'] == 'con'? 'Confirmed': ( $ds['reservation'] == 'can'? 'Cancelled': ($ds['reservation'] == 'pen'? 'Pending': ''));?></td>
-                                                  <td><?= $ds['payment']=='PA'? 'Payed' : ($ds['status']=='PE'? 'Pending' : ($ds['status']=='FA'? 'Failed' : '')); ?></td>
+                                                  <td><?= $ds['nama'] ?></td>
+                                                  <td><?= $ds['kodeReservasi'] ?></td>
+                                                  <td><?= $ds['tglCheckin'] ?></td>
+                                                  <td><?= $ds['tglCheckout'] ?></td>
+                                                  <td><?= $ds['status'] == 'con'? 'Confirmed': ( $ds['status'] == 'can'? 'Cancelled': ($ds['status'] == 'pen'? 'Pending': ''));?></td>
+                                                  <td><?= $ds['pembayaran_status']=='PA'? 'Payed' : ($ds['pembayaran_status']=='PE'? 'Pending' : ($ds['pembayaran_status']=='FA'? 'Failed' : '')); ?></td>
                                               </tr>
                                           <?php endforeach; ?>
                                       <?php endif; ?>
