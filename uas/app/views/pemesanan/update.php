@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 ">
-                <form action="index.php?action=uPemesanan&id=" method="post" id="step-form-horizontal" class="step-form-horizontal">
+                <form action="index.php?action=uPemesanan&id=<?= $id ?>" method="post" id="step-form-horizontal" class="step-form-horizontal">
                     <div>
                         <h4 class="card-title">Edit Reservation</h4>
                         <section>
@@ -17,7 +17,7 @@
                                         <select class="form-control custom-select" name="tamu_id" required>
                                             <option selected="selected" value="" hidden>Select Guest Name...</option>
                                             <?php foreach($dataTamu as $dt): ?>
-                                            <option value="<?= $dt['id'] ?>" <?= $data['tamu_id']==$dt['id']? 'selected': ''; ?>><?= $dt['nama'] ?></option>
+                                            <option value="<?= $dt['id'] ?>" <?=$dt['id']==$data['tamu_id']? 'selected': ''; ?>><?= $dt['nama'] ?></option>
                                             <?php endforeach ?>
                                         </select>
                                     </div>
@@ -27,7 +27,6 @@
                                         <input type="text" name="kodeReservasi" value="<?= $data['kodeReservasi'] ?>" class="form-control" minlength="9" maxlength="9" placeholder="Input Reservation Kode..." required>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <select class="form-control custom-select" name="kamar_id" required>

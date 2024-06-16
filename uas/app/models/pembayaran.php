@@ -24,11 +24,7 @@ class pembayaran {
     }
 
     public function showPembayaran($id) {
-        $query = "SELECT pb.id, pm.kodeReservasi as reservation_code, pb.metodePembayaran, 
-                         pb.tglPembayaran, pb.status
-                  FROM " . $this->table_name . " pb
-                  JOIN pemesanan pm ON pb.pemesanan_id = pm.id
-                  WHERE pb.id = :id";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE id=:id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
@@ -85,7 +81,6 @@ class pembayaran {
         }
         return false;
     }
-
     public function deletePembayaran($id) {
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
         $stmt = $this->conn->prepare($query);
