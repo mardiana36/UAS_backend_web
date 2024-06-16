@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Add Room</h4>
                         <div class="form-validation">
-                            <form class="" action="index.php?action=cInfokamar&id=" method="post" enctype="multipart/form-data">
+                            <form class="" action="index.php?action=cInfokamar" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
                                     </label>
@@ -54,7 +54,7 @@
                                     <label class="col-lg-4 col-form-label" for="foto">Image<span class="text-danger">*</span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input type="file" class="form-control" id="foto" name="foto" placeholder="Input image..." required>
+                                        <input type="file" class="form-control" accept=".jpg, .png, .jepg" id="foto" name="foto" placeholder="Input image..." required>
                                     </div>
                                 </div>
 

@@ -22,23 +22,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <span>
-                                                <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fa fa-pencil color-muted m-r-5"></i>
-                                                </a>
-                                                <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                    <i class="fa fa-close color-danger"></i>
-                                                </a>
-                                            </span>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    if (isset($data)) :
+                                        $no = 0;
+                                    ?>
+                                        <?php foreach ($data as $t) : ?>
+                                            <tr>
+                                                <td><?= ++$no?></td>
+                                                <td><?= $t['nama'] ?></td>
+                                                <td><?= $t['email'] ?></td>
+                                                <td><?= $t['telepon'] ?></td>
+                                                <td><?= $t['alamat'] ?></td>
+                                                <td>
+                                                    <span>
+                                                        <a href="index.php?action=uTamu&id=<?= $t['id'] ?>" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                        </a>
+                                                        <a href="index.php?action=dTamu&id=<?= $t['id'] ?>" class="sweet-confirm"  data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <i class="fa fa-close color-danger"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>

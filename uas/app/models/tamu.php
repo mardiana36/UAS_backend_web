@@ -48,22 +48,20 @@ class tamu {
     }
 
     public function updateTamu() {
-        $query = "UPDATE " . $this->table_name . " SET nama=:nama, email=:email, telepon=:telepon, alamat=:alamat, where id=:id";
+        $query = "UPDATE " . $this->table_name . " SET nama=:nama, email=:email, telepon=:telepon, alamat=:alamat WHERE id=:id";
         $stmt = $this->conn->prepare($query);
-
+        
         $this->nama = htmlspecialchars(strip_tags($this->nama));
         $this->email = htmlspecialchars(strip_tags($this->email));
         $this->telepon = htmlspecialchars(strip_tags($this->telepon));
         $this->alamat = htmlspecialchars(strip_tags($this->alamat));
-        $this->id = $this->id;
 
+        $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":nama", $this->nama);
         $stmt->bindParam(":email", $this->email);
         $stmt->bindParam(":telepon", $this->telepon);
         $stmt->bindParam(":alamat", $this->alamat);
-        $stmt->bindParam(":id", $this->id);
         
-    
         if ($stmt->execute()) {
             return true;
         }
