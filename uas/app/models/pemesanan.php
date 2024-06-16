@@ -41,14 +41,15 @@ class pemesanan {
     }
 
     public function createPemesanan() {
-        $query = "INSERT INTO " . $this->table_name . " SET 
-                  tamu_id = :tamu_id, 
-                  kodeReservasi = :kodeReservasi, 
-                  kamar_id = :kamar_id, 
-                  tglCheckin = :tglCheckin, 
-                  tglCheckout = :tglCheckout, 
-                  status = :status, 
-                  harga = :harga";
+        $query = "INSERT INTO " . $this->table_name .
+            " SET 
+                  tamu_id=:tamu_id, 
+                  kodeReservasi=:kodeReservasi, 
+                  kamar_id=:kamar_id, 
+                  tglCheckin=:tglCheckin, 
+                  tglCheckout=:tglCheckout, 
+                  status=:status, 
+                  harga=:harga";
         $stmt = $this->conn->prepare($query);
 
         $this->tamu_id = htmlspecialchars(strip_tags($this->tamu_id));
@@ -74,15 +75,16 @@ class pemesanan {
     }
 
     public function updatePemesanan() {
-        $query = "UPDATE " . $this->table_name . " SET 
-                  tamu_id = :tamu_id, 
-                  kodeReservasi = :kodeReservasi, 
-                  kamar_id = :kamar_id, 
-                  tglCheckin = :tglCheckin, 
-                  tglCheckout = :tglCheckout, 
-                  status = :status, 
-                  harga = :harga 
-                  WHERE id = :id";
+        $query = "UPDATE " . $this->table_name .
+            " SET 
+                  tamu_id=:tamu_id, 
+                  kodeReservasi=:kodeReservasi, 
+                  kamar_id=:kamar_id, 
+                  tglCheckin=:tglCheckin, 
+                  tglCheckout=:tglCheckout, 
+                  status=:status, 
+                  harga=:harga 
+                  WHERE id=:id";
         $stmt = $this->conn->prepare($query);
 
         $this->tamu_id = htmlspecialchars(strip_tags($this->tamu_id));

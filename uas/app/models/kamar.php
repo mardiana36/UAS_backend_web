@@ -1,3 +1,4 @@
+<script src="app/views/assets/js/templateAlert.js"></script>
 <?php
 class infokamar {
     private $conn;
@@ -37,12 +38,10 @@ class infokamar {
 
         $ekstensiGambar = strtolower(end($ekstensiGambar));
         if (!in_array($ekstensiGambar, $ekstensiValid)) {
-            echo "<script>swal('Oops!','Allowed file extensions are only [jpg, jpeg, png]','error');</script>";
-            return false;
+            return 401;
         }
         if ($ukuranFile > 1000000) {
-            echo "<script>swal('Oops!','Maximum photo size = 1MB','error');</script>";
-            return false;
+            return 402;
         }
         $namaFileBaru = uniqid();
         $namaFileBaru .= '.';
@@ -77,23 +76,21 @@ class infokamar {
     }
 
     public function updateKamar() {
-
         $query = "UPDATE " . $this->table_name . " SET nomor=:nomor, tipe=:tipe, status=:status, harga=:harga, foto=:foto WHERE id=:id";
         $stmt = $this->conn->prepare($query);
 
+        $this->id = htmlspecialchars(strip_tags($this->id));
         $this->nomor = htmlspecialchars(strip_tags($this->nomor));
         $this->tipe = htmlspecialchars(strip_tags($this->tipe));
         $this->status = htmlspecialchars(strip_tags($this->status));
         $this->harga = htmlspecialchars(strip_tags($this->harga));
-        $this->foto = htmlspecialchars(strip_tags($this->foto));
-        $this->id = htmlspecialchars(strip_tags($this->id));
         
+        $stmt->bindParam(":id", $this->id);
         $stmt->bindParam(":nomor", $this->nomor);
         $stmt->bindParam(":tipe", $this->tipe);
         $stmt->bindParam(":status", $this->status);
         $stmt->bindParam(":harga", $this->harga);
         $stmt->bindParam(":foto", $this->foto);
-        $stmt->bindParam(":id", $this->id);
         
         if ($stmt->execute()) {
             return true;
