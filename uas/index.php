@@ -106,7 +106,7 @@ switch ($action) {
     case "uTamu":
         $_SESSION['page'] = "Edit Guest";
         require "app/views/components/headers.php";
-        // require "app/views/components/navbars.php";
+        require "app/views/components/navbars.php";
        $tamuController->update($id);
         require "app/views/components/footers.php";
         break;

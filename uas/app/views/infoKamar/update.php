@@ -13,6 +13,7 @@
                         <h4 class="card-title">Update Room</h4>
                         <div class="form-validation">
                             <form class="" action="index.php?action=uInfokamar&id=<?= $id ?>" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="fotoLama" value="<?= $data['foto'] ?>">
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-form-label" for="nomor">Room Number<span class="text-danger">*</span>
                                     </label>
@@ -46,8 +47,8 @@
                                         <select class="form-control" id="status" name="status" required>
                                             <option value="" hidden>Choose...</option>
                                             <option value="AV" <?=$data['status']=='AV'? "selected":""; ?>>Available</option>
-                                            <option value="OC" <?=$data['status']=='AV'? "selected":""; ?>>Occupied</option>
-                                            <option value="MA" <?=$data['status']=='AV'? "selected":""; ?>>Maintenance</option>
+                                            <option value="OC" <?=$data['status']=='OC'? "selected":""; ?>>Occupied</option>
+                                            <option value="MA" <?=$data['status']=='MA'? "selected":""; ?>>Maintenance</option>
                                         </select>
                                     </div>
                                 </div>
@@ -56,7 +57,7 @@
                                     </label>
                                     <div class="col-lg-6">
                                         <img src="app/views/assets/images/foto/<?= $data['foto'] ?>" width="80" alt="">
-                                        <input type="file" class="form-control" accept=".jpg, .png, .jepg" id="foto" name="foto" placeholder="Input image..." required>
+                                        <input type="file" class="form-control" accept=".jpg, .png, .jepg" id="foto" name="foto" placeholder="Input image...">
                                     </div>
                                 </div>
 

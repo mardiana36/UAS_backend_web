@@ -30,11 +30,11 @@ class pemesananController
     public function create($dataTamu,$dataKamar)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $tamu_id = $_POST['tamu_id$tamu_id'];
+            $tamu_id = $_POST['tamu_id'];
             $kodeReservasi = $_POST['kodeReservasi'];
             $kamar_id = $_POST['kamar_id'];
-            $tglCheckin = $_POST['tglCheckin'];
-            $tglCheckout = $_POST['tglCheckout'];
+            $tglCheckin = $_POST['checkin'];
+            $tglCheckout = $_POST['checkout'];
 
             $this->pm->tamu_id = $tamu_id;
             $this->pm->kodeReservasi = $kodeReservasi;
