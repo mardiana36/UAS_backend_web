@@ -186,7 +186,7 @@
                                     </li>
 
                                     <hr class="my-2">
-                                    <li><a href="index.php?action=logout"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    <li><a href="index.php?action=logout" onclick="alertConfirm('Do you want to log out?','If you log out you will exit the current session', 'index.php?action=logout');"><i class="icon-key"></i> <span>Logout</span></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -35,6 +35,7 @@ function alertSuksess(title, text, link) {
     });
 }
 function alertConfirm(title, text, link) {
+  event.preventDefault();
   swal({
     title: title,
     text: text,
