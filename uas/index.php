@@ -4,11 +4,13 @@ include "app/controllers/tamuController.php";
 include "app/controllers/kamarController.php";
 include "app/controllers/pembayaranController.php";
 include "app/controllers/pemesananController.php";
+include "app/controllers/dashboardController.php";
 $userController = new userController();
 $tamuController = new tamuController();
 $kamarController = new kamarController();
 $pembayaranController = new pembayaranController();
 $pemesananController = new pemesananController();
+$dashboardController = new dashboardController();
 session_start();
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 $id = isset($_GET['id']) ? $_GET['id'] : '';
@@ -140,7 +142,7 @@ switch ($action) {
         $_SESSION['page'] = "Dashboard";
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-        require "app/views/dashboard/dashboard.php";
+        $dashboardController->getDashboardData();
         require "app/views/components/footers.php";
         break;
     case "dTamu":
