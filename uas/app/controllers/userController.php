@@ -1,6 +1,6 @@
 <?php
-require 'app/config/db.php';
-require 'app/models/user.php';
+require_once 'app/config/db.php';
+require_once 'app/models/user.php';
 class userController
 {
     private $db;
@@ -60,12 +60,12 @@ class userController
             $this->user->role = $role;
 
             if ($this->user->create()) {
-                echo "<script>window.location.href = 'index.php?action=cUser';</script>";
+                echo "<script>window.location.href = 'index.php?action=rUser';</script>";
             } else {
                 echo "<script>alert('Terjadi kesalahan pada saat create!');</script>";
             }
         } else {
-            include "app/views/mahaiswa/create.php";
+            include "app/views/user/create.php";
         }
     }
     public function update($id)
@@ -82,25 +82,24 @@ class userController
             $this->user->email = $email;
             $this->user->role = $role;
 
-            if ($this->user->create()) {
-                echo "<script>window.location.href = 'index.php?action=cUser';</script>";
+            if ($this->user->update()) {
+                echo "<script>window.location.href = 'index.php?action=rUser';</script>";
             } else {
-                echo "<script>alert('Terjadi kesalahan pada saat create!');</script>";
+                echo "<script>alert('Terjadi kesalahan pada saat update!');</script>";
             }
         } else {
             $stmt = $this->user->show($id);
             $data = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($data) {
-                include 'app/views/user/edit.php';
+                include 'app/views/user/update.php';
             } else {
-                echo "Mahasiswa not found.";
+                echo "User not found.";
             }
         }
     }
     public function delete($id)
     {
-        $stmt = $this->user->delete($id);
+       $this->user->delete($id);
         echo "<script>window.location.href = 'index.php?action=rUser';</script>";
-        return $stmt;
     }
 }

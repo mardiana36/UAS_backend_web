@@ -23,16 +23,18 @@ class user
     }
     public function show($id)
     {
-        $query = "SELECT * FROM " . $this->tableName. " WHERE id= ?";
+        $query = "SELECT * FROM " . $this->tableName . " WHERE id=:id";
         $stmt = $this->conn->prepare($query);
         $id = htmlspecialchars(strip_tags($id));
-        $stmt->bindParam(1, $id);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
         return $stmt;
     }
+    
 
     public function create()
     {
-        $query = "INSERT INTO " . $this->tableName . " VALUES username=:username, password=:password, email=:email, role=:role";
+        $query = "INSERT INTO " . $this->tableName . " SET username=:username, password=:password, email=:email, role=:role";
         $stmt =  $this->conn->prepare($query);
         $this->username = htmlspecialchars(strip_tags($this->username));
         $this->password = htmlspecialchars(strip_tags($this->password));
@@ -52,7 +54,6 @@ class user
     {
         $query = "UPDATE " . $this->tableName . " SET username=:username, password=:password, email=:email, role=:role WHERE id=:id";
         $stmt =  $this->conn->prepare($query);
-        $this->id = htmlspecialchars(strip_tags($this->id));
         $this->username = htmlspecialchars(strip_tags($this->username));
         $this->password = htmlspecialchars(strip_tags($this->password));
         $this->email = htmlspecialchars(strip_tags($this->email));
@@ -69,7 +70,8 @@ class user
         return false;
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $query = "DELETE FROM " . $this->tableName . " WHERE id = ?";
         $stmt = $this->conn->prepare($query);
         $id = htmlspecialchars(strip_tags($id));

@@ -18,7 +18,9 @@
                                             <div class="col-lg-6">
                                                 <select class="form-control" id="pemesanan_id" name="pemesanan_id" required>
                                                     <option value="" hidden>Choose...</option>
-                                                    <option value="">Reservation Code</option>
+                                                    <?php foreach ($pemesanan as $pm): ?>
+                                                    <option value="<?=$pm['id'] ?>"><?= $pm['kodeReservasi'] ?></option>
+                                                    <?php endforeach; ?>
                                                 </select>
                                             </div>
                                         </div>

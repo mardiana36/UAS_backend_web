@@ -30,7 +30,7 @@
                                        <label class="col-lg-4 col-form-label" for="telepon">Phone Number<span class="text-danger">*</span>
                                        </label>
                                        <div class="col-lg-6">
-                                           <input type="tel" pattern="[0-9]{10,13}" class="form-control" id="telepon" name="telepon" placeholder="Input The Guest Email..." required>
+                                           <input type="tel" pattern="[0-9]{10,13}" class="form-control" id="telepon" name="telepon" placeholder="Input The Guest Phone Number..." required>
                                        </div>
                                    </div>
                                    <div class="form-group row">

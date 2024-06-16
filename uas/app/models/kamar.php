@@ -27,6 +27,30 @@ class infokamar {
         $stmt->execute();
         return $stmt;
     }
+    function uploadFile(){
+        $namaFile = $_FILES["foto"]["name"];
+        $ukuranFile = $_FILES["foto"]["size"];
+        $tmpFile = $_FILES["foto"]["tmp_name"];
+
+        $ekstensiValid = ['jpg', 'jpeg', 'png'];
+        $ekstensiGambar = explode('.', $namaFile);
+
+        $ekstensiGambar = strtolower(end($ekstensiGambar));
+        if (!in_array($ekstensiGambar, $ekstensiValid)) {
+            echo "<script>swal('Oops!','Allowed file extensions are only [jpg, jpeg, png]','error');</script>";
+            return false;
+        }
+        if ($ukuranFile > 1000000) {
+            echo "<script>swal('Oops!','Maximum photo size = 1MB','error');</script>";
+            return false;
+        }
+        $namaFileBaru = uniqid();
+        $namaFileBaru .= '.';
+        $namaFileBaru .= $ekstensiGambar;
+
+        move_uploaded_file($tmpFile, 'app/views/assets/images/foto/' . $namaFileBaru);
+        return $namaFileBaru;
+    }
 
     public function createKamar() {
 

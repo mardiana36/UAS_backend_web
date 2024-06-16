@@ -23,24 +23,31 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <span>
-                                                <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                    <i class="fa fa-pencil color-muted m-r-5"></i>
-                                                </a>
-                                                <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Delete">
-                                                    <i class="fa fa-close color-danger"></i>
-                                                </a>
-                                            </span>
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    if (isset($data)) :
+                                        $no = 0;
+                                    ?>
+                                        <?php foreach ($data as $ik) : ?>
+                                            <tr>
+                                                <td><?= ++$no?></td>
+                                                <td><img src="app/views/assets/images/foto/<?=$ik['foto'] ?>" width="100" alt=""></td>
+                                                <td><?= $ik['nomor'] ?></td>
+                                                <td><?= $ik['tipe'] == '1' ? "Single" : ($ik['tipe'] == '2' ? "Double" : ($ik['tipe'] == '3' ? "Suite" : "")); ?></td>
+                                                <td><?= $ik['status'] == 'AV' ? "Available" : ($ik['status'] == 'OC' ? "Occupied" : ($ik['status'] == 'MA' ? "Maintenance" : ""));?></td>
+                                                <td><?= $ik['harga'] ?></td>
+                                                <td>
+                                                    <span>
+                                                        <a href="index.php?action=uInfokamar&id=<?=$ik['id']?>" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                            <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                        </a>
+                                                        <a href="index.php?action=dInfokamar&id=<?=$ik['id']?>" data-toggle="tooltip" class="sweet-confirm" data-placement="top" title="Delete">
+                                                            <i class="fa fa-close color-danger"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>

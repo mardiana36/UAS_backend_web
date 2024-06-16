@@ -37,4 +37,3 @@
 </section>
 <script src="app/views/assets/plugins/sweetalert/js/sweetalert.min.js"></script>
 <script src="app/views/assets/js/login.js"></script>
-<script>showSweetAlert('Oops...', 'The email/username or password you entered is incorrect!!!', 'error');</script>

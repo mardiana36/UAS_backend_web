@@ -35,10 +35,11 @@
                                                  <td><?= $u['role'] ?></td>
                                                  <td>
                                                      <span>
-                                                         <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Edit">
-                                                             <i class="fa fa-pencil color-muted m-r-5"></i>
+                                                         <a href="index.php?action=uUser&id=<?= $u['id'] ?>" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                             <i class="fa fa-pencil color-muted m-r-5 "></i>
                                                          </a>
-                                                         <a href="index.php?action= &id=" data-toggle="tooltip" data-placement="top" title="Delete">
+
+                                                         <a href="index.php?action=dUser&id=<?= $u['id'] ?>"  class="sweet-confirm"  data-toggle="tooltip" data-placement="top" title="Delete">
                                                              <i class="fa fa-close color-danger"></i>
                                                          </a>
                                                      </span>

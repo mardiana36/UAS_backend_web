@@ -16,7 +16,9 @@
                                     <div class="form-group">
                                         <select class="form-control custom-select" name="tamu_id" required>
                                             <option selected="selected" value="" hidden>Select Guest Name...</option>
-                                            <option value="1">Joko</option>
+                                            <?php foreach($dataTamu as $dt): ?>
+                                            <option value="<?= $dt['id'] ?>"><?= $dt['nama'] ?></option>
+                                            <?php endforeach ?>
                                         </select>
                                     </div>
                                 </div>
@@ -30,7 +32,9 @@
                                     <div class="form-group">
                                         <select class="form-control custom-select" name="kamar_id" required>
                                             <option selected="selected" value="" hidden>Select Guest Room...</option>
-                                            <option value="1">L102</option>
+                                            <?php foreach($dataKamar as $dk): ?>
+                                            <option value="<?= $dk['id'] ?>"><?= $dk['nomor'] ?></option>
+                                            <?php endforeach ?>
                                         </select>
                                     </div>
                                 </div>
