@@ -23,8 +23,8 @@
                 <div class="card-body">
                   <h3 class="card-title text-white">Guest</h3>
                   <div class="d-inline-block">
-                    <h2 class="text-white">10</h2>
-                    <p class="text-white mb-0">Jan - Juni 2024</p>
+                    <h2 class="text-white"><?= $totalGuest ?></h2>
+                    <p class="text-white mb-0"><?= $tanggal_hari_ini  ?></p>
                   </div>
                   <span class="float-right display-5 opacity-5"
                     ><i class="fa fa-users"><a href="index.html"></a></i
@@ -37,8 +37,8 @@
                 <div class="card-body">
                   <h3 class="card-title text-white">Room</h3>
                   <div class="d-inline-block">
-                    <h2 class="text-white">$ 8541</h2>
-                    <p class="text-white mb-0">Jan - March 2019</p>
+                    <h2 class="text-white"><?= $totalRoom ?></h2>
+                    <p class="text-white mb-0"><?= $tanggal_hari_ini  ?></p>
                   </div>
                   <span class="float-right display-5 opacity-5"
                     ><i class="fa fa-building"></i
@@ -51,8 +51,8 @@
                 <div class="card-body">
                   <h3 class="card-title text-white">Profit</h3>
                   <div class="d-inline-block">
-                    <h2 class="text-white">4565</h2>
-                    <p class="text-white mb-0">Jan - March 2019</p>
+                    <h2 class="text-white"><?= $totalProfit ?></h2>
+                    <p class="text-white mb-0"><?= $tanggal_hari_ini  ?></p>
                   </div>
                   <span class="float-right display-5 opacity-5"
                     ><i class="fa fa-money"></i
@@ -65,8 +65,8 @@
                 <div class="card-body">
                   <h3 class="card-title text-white">Booking</h3>
                   <div class="d-inline-block">
-                    <h2 class="text-white">99%</h2>
-                    <p class="text-white mb-0">Jan - March 2019</p>
+                    <h2 class="text-white"><?= $totalBooking ?></h2>
+                    <p class="text-white mb-0"><?= $tanggal_hari_ini  ?></p>
                   </div>
                   <span class="float-right display-5 opacity-5"
                     ><i class="fa fa-book"></i
@@ -78,35 +78,42 @@
         </div>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-body">
-                  <div class="active-member">
-                    <div class="table-responsive">
-                      <table class="table table-xs mb-0">
-                        <thead>
-                          <tr>
-                            <th>Guest</th>
-                            <th>Checkin</th>
-                            <th>Checkout</th>
-                            <th>Reservation</th>
-                            <th>Payment</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                        </tbody>
-                      </table>
+           <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="active-member">
+                            <div class="table-responsive">
+                                <table class="table table-xs mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Guest</th>
+                                            <th>Checkin</th>
+                                            <th>Checkout</th>
+                                            <th>Reservation</th>
+                                            <th>Payment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                      if (isset($data)) :
+                                          $no = 0;
+                                      ?>
+                                          <?php foreach ($data as $ds) : ?>
+                                              <tr>
+                                                  <td><?= $ds['guest'] ?></td>
+                                                  <td><?= $ds['checkin'] ?></td>
+                                                  <td><?= $ds['checkout'] ?></td>
+                                                  <td><?= $ds['reservation'] == 'con'? 'Confirmed': ( $ds['reservation'] == 'can'? 'Cancelled': ($ds['reservation'] == 'pen'? 'Pending': ''));?></td>
+                                                  <td><?= $ds['payment']=='PA'? 'Payed' : ($ds['status']=='PE'? 'Pending' : ($ds['status']=='FA'? 'Failed' : '')); ?></td>
+                                              </tr>
+                                          <?php endforeach; ?>
+                                      <?php endif; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
             <div class="col-lg-4">
               <body class="dark" id="calendar-body">
