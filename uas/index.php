@@ -158,7 +158,7 @@ switch ($action) {
         break;
     case "dInfokamar":
         require "app/views/components/headers.php";
-        // require "app/views/components/navbars.php";
+        require "app/views/components/navbars.php";
         $kamarController->delete($id);
         require "app/views/components/footers.php";
         break;
