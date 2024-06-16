@@ -67,7 +67,6 @@ class tamu {
         }
         return false;
     }
-
     public function deleteTamu($id) {
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
         $stmt = $this->conn->prepare($query);

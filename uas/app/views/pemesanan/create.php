@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 ">
-                <form action="index.php?action=uPemesanan" method="post" id="step-form-horizontal" class="step-form-horizontal">
+                <form action="index.php?action=cPemesanan" method="post" id="step-form-horizontal" class="step-form-horizontal">
                     <div>
                         <h4 class="card-title">Add Reservation</h4>
                         <section>

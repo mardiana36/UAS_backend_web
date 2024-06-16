@@ -1,3 +1,5 @@
+<script src="app/views/assets/js/templateAlert.js"></script>
+<script src="app/views/assets/js/alert.js"></script>
 <?php
 require_once 'app/config/db.php';
 require_once 'app/models/user.php';
@@ -25,13 +27,13 @@ class userController
             foreach ($data as $user) {
                 if (($user['email'] == $userIdentity || $user['username'] == $userIdentity) && $user['password'] == $password) {
                     $_SESSION['login'] = true;
+                    $_SESSION['username'] = $user['username'];
                     $_SESSION['role'] = $user['role'];
                     $loggedIn = true;
                     echo "<script>window.location.href = 'index.php?action=dashboard';</script>";
                     break;
                 }
             }
-
             if (!$loggedIn == true) {
                 echo "<script>window.location.href = 'index.php?action=loginFalse';</script>";
             }
@@ -39,8 +41,18 @@ class userController
             require "app/views/login/index.php";
         }
     }
-
-    public function index(){
+    public function logout()
+    {
+        if($_SESSION['login']== true){
+            session_unset();
+            session_destroy();
+            echo"<script>alertConfirm('Do you want to log out?','If you log out you will exit the current session', 'index.php'); </script>";
+        }else{
+            echo "<script>alertWarning('Oops!','You haven't logged in!','index.php');</script>";
+        }
+    }
+    public function index()
+    {
         $stmt = $this->user->read();
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         include "app/views/user/index.php";
@@ -99,7 +111,11 @@ class userController
     }
     public function delete($id)
     {
-       $this->user->delete($id);
-        echo "<script>window.location.href = 'index.php?action=rUser';</script>";
+        $data = $this->user->delete($id);
+        if ($data) {
+            echo "<script>alertSuksess('Congratulations','Reservation data has been successfully deleted','index.php?action=rPemesanan');</script>";
+        } else {
+            echo "<script>alertWarning('Oops!','Something went wrong','index.php?action=rPemesanan');</script>";
+        }
     }
 }

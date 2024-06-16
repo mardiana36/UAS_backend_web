@@ -1,5 +1,5 @@
 :root {
-  --light-body: #14104c;
+  --light-body: #000000;
   --light-main: #7571f9;
   --light-second: #fafafa;
   --light-hover: #323048;
@@ -273,12 +273,12 @@
   transition: all 0.2s ease-in-out;
 }
 
-.month-list > div {
+.month-list>div {
   display: grid;
   place-items: center;
 }
 
-.month-list > div > div {
+.month-list>div>div {
   width: 100%;
   padding: 5px 20px;
   border-radius: 10px;
@@ -286,7 +286,7 @@
   cursor: pointer;
 }
 
-.month-list > div > div:hover {
+.month-list>div>div:hover {
   background-color: var(--color-hover);
 }
 

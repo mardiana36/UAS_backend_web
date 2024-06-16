@@ -20,7 +20,7 @@ class dashboardController {
                 p.tglCheckin AS checkin, 
                 p.tglCheckout AS checkout, 
                 p.status AS reservation, 
-                pb.status AS payment
+                COALESCE(pb.status, 'N/A') AS payment
             FROM 
                 pemesanan p
             LEFT JOIN 

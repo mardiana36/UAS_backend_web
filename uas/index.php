@@ -92,7 +92,7 @@ switch ($action) {
     case "cPembayaran":
         $_SESSION['page'] = "Add Payment";
         require "app/views/components/headers.php";
-        require "app/views/components/navbars.php";
+        // require "app/views/components/navbars.php";
         $pembayaranController->create($pemesananController->get());
         require "app/views/components/footers.php";
         break;
@@ -158,7 +158,7 @@ switch ($action) {
         break;
     case "dInfokamar":
         require "app/views/components/headers.php";
-        require "app/views/components/navbars.php";
+        // require "app/views/components/navbars.php";
         $kamarController->delete($id);
         require "app/views/components/footers.php";
         break;
@@ -181,6 +181,8 @@ switch ($action) {
         $userController->login();
         echo "<script>showSweetAlert('Oops...', 'The email/username or password you entered is incorrect!!!');</script>";
         break;
+        case "logout":
+            $userController->logout();
     default:
         $_SESSION['page'] = "Login";
         require "app/views/components/headers.php";

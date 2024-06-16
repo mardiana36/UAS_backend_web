@@ -1,3 +1,5 @@
+<script src="app/views/assets/js/templateAlert.js"></script>
+<script src="app/views/assets/js/alert.js"></script>
 <?php
 require_once 'app/config/db.php';
 require_once 'app/models/tamu.php';
@@ -30,7 +32,7 @@ class tamuController
     public function create()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $nama= $_POST['nama'];
+            $nama = $_POST['nama'];
             $email = $_POST['email'];
             $telepon = $_POST['telepon'];
             $alamat = $_POST['alamat'];
@@ -51,7 +53,7 @@ class tamuController
     public function update($id)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $nama= $_POST['nama'];
+            $nama = $_POST['nama'];
             $email = $_POST['email'];
             $telepon = $_POST['telepon'];
             $alamat = $_POST['alamat'];
@@ -78,7 +80,11 @@ class tamuController
     }
     public function delete($id)
     {
-        $this->tamu->deleteTamu($id);
-        echo "<script>window.location.href = 'index.php?action=rTamu';</script>";
+        $delete = $this->tamu->deleteTamu($id);
+        if ($delete) {
+            echo "<script>alertSuksess('Congratulations','Guest data has been successfully deleted','index.php?action=rTamu');</script>";
+        } else {
+            echo "<script>alertWarning('Oops!','Something went wrong','index.php?action=rTamu');</script>";
+        }
     }
 }

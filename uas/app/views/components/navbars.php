@@ -192,19 +192,14 @@
                             <div class="dropdown-content-body">
                                 <ul>
                                     <li>
-                                        <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                        <p>Username: <?= $_SESSION['username']; ?></p>
                                     </li>
                                     <li>
-                                        <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span>
-                                            <div class="badge gradient-3 badge-pill badge-primary">3</div>
-                                        </a>
+                                        <p>Role: <?= $_SESSION['role']; ?></p>
                                     </li>
 
                                     <hr class="my-2">
-                                    <li>
-                                        <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
-                                    </li>
-                                    <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    <li><a href="index.php?action=logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -226,56 +221,56 @@
             <ul class="metismenu" id="menu">
                 <li class="nav-label">Dashboard</li>
                 <li>
-                    <a href="index.php?action=dashboard" >
+                    <a href="index.php?action=dashboard">
                         <i class="icon-speedometer"></i><span class="nav-text">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-label">Apps</li>
-                    <li>
-                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">User</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.php?action=rUser">User</a></li>
-                            <li><a href="index.php?action=cUser">Add User</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Guest</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.php?action=rTamu">Guest</a></li>
-                            <li><a href="index.php?action=cTamu">Add Guest</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Payment</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.php?action=rPembayaran">Payment</a></li>
-                            <li><a href="index.php?action=cPembayaran">Add Payment</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Reservation</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.php?action=rPemesanan">Reservation</a></li>
-                            <li><a href="index.php?action=cPemesanan">Add Reservation</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow"  href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Room</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="index.php?action=rInfokamar">Room</a></li>
-                            <li><a href="index.php?action=cInfokamar">Add Room</a></li>
-                        </ul>
-                    </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-user menu-icon"></i> <span class="nav-text">User</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="index.php?action=rUser">User</a></li>
+                        <li><a href="index.php?action=cUser">Add User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="ion-android-people menu-icon"></i> <span class="nav-text">Guest</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="index.php?action=rTamu">Guest</a></li>
+                        <li><a href="index.php?action=cTamu">Add Guest</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-wallet menu-icon"></i> <span class="nav-text">Payment</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="index.php?action=rPembayaran">Payment</a></li>
+                        <li><a href="index.php?action=cPembayaran">Add Payment</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="ion-ios-book menu-icon"></i> <span class="nav-text">Reservation</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="index.php?action=rPemesanan">Reservation</a></li>
+                        <li><a href="index.php?action=cPemesanan">Add Reservation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                        <i class="icon-home menu-icon"></i> <span class="nav-text">Room</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="index.php?action=rInfokamar">Room</a></li>
+                        <li><a href="index.php?action=cInfokamar">Add Room</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

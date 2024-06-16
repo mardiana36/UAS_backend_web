@@ -1,3 +1,5 @@
+<script src="app/views/assets/js/templateAlert.js"></script>
+<script src="app/views/assets/js/alert.js"></script>
 <?php
 require_once 'app/config/db.php';
 require_once 'app/models/pembayaran.php';
@@ -49,7 +51,7 @@ class pembayaranController
             $metodePembayaran = $_POST['metodePembayaran'];
             $tglPembayaran = $_POST['tglPembayaran'];
             $status = $_POST['status'];
-
+            $this->pb->id =$id;
             $this->pb->pemesanan_id = $pemesanan_id;
             $this->pb->metodePembayaran = $metodePembayaran;
             $this->pb->tglPembayaran = $tglPembayaran;
@@ -71,7 +73,11 @@ class pembayaranController
     }
     public function delete($id)
     {
-        $this->pb->deletePembayaran($id);
-        echo "<script>window.location.href = 'index.php?action=rPembayaran';</script>";
+       $data = $this->pb->deletePembayaran($id);
+        if($data){
+            echo "<script>alertSuksess('Congratulations','Pymend data has been successfully deleted','index.php?action=rPembayaran');</script>";
+        } else{
+         echo "<script>alertWarning('Oops!','Something went wrong','index.php?action=rPembayaran');</script>";
+        }
     }
 }
