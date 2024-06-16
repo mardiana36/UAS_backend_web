@@ -43,13 +43,9 @@ class userController
     }
     public function logout()
     {
-        if($_SESSION['login']== true){
             session_unset();
             session_destroy();
-            echo"<script>alertConfirm('Do you want to log out?','If you log out you will exit the current session', 'index.php'); </script>";
-        }else{
-            echo "<script>alertWarning('Oops!','You haven't logged in!','index.php');</script>";
-        }
+            echo "<script>window.location.href = 'index.php?action=logout';</script>";
     }
     public function index()
     {
