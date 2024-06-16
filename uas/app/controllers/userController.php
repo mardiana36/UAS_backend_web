@@ -109,7 +109,7 @@ class userController
     {
         $data = $this->user->delete($id);
         if ($data) {
-            echo "<script>alertSuksess('Congratulations','Reservation data has been successfully deleted','index.php?action=rPemesanan');</script>";
+            echo "<script>alertSuksess('Congratulations','User data has been successfully deleted','index.php?action=rPemesanan');</script>";
         } else {
             echo "<script>alertWarning('Oops!','Something went wrong','index.php?action=rPemesanan');</script>";
         }
