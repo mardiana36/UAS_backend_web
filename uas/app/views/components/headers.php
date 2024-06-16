@@ -14,15 +14,8 @@
     <link href="app/views/assets/css/styleCalendar.css" rel="stylesheet">
 
     <link href="app/views/assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
-    <!-- Page plugins css -->
-    <link href="app/views/assets/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
-    <!-- Color picker plugins css -->
-    <link href="app/views/assets/plugins/jquery-asColorPicker-master/css/asColorPicker.css" rel="stylesheet">
-    <!-- Date picker plugins css -->
     <link href="app/views/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
     <!-- Daterange picker plugins css -->
-    <link href="app/views/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-    <link href="app/views/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="app/views/assets/css/styleCustom.css" rel="stylesheet">
     <link href="app/views/assets/plugins/sweetalert/css/sweetalert.css" rel="stylesheet">
 </head>
