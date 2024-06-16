@@ -14,10 +14,10 @@ $dashboardController = new dashboardController();
 session_start();
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 $id = isset($_GET['id']) ? $_GET['id'] : '';
-if (!isset($_SESSION["login"]) && $action!= '') {
+if (!isset($_SESSION["login"]) && $action != '') {
     $action = "index.php";
 }
-if(isset($_SESSION['role']) && $_SESSION['role'] != "admin"){
+if (isset($_SESSION['role']) && $_SESSION['role'] != "admin") {
     switch ($action) {
         case "rUser":
         case "uUser":
@@ -29,7 +29,7 @@ if(isset($_SESSION['role']) && $_SESSION['role'] != "admin"){
             echo "<script>alert('Only Admin Can Access This Page!!!');</script>";
             $action = "dashboard";
             break;
-   }
+    }
 }
 
 switch ($action) {
@@ -100,14 +100,14 @@ switch ($action) {
         $_SESSION['page'] = "Add Reservation";
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-        $pemesananController->create($tamuController->get(),$kamarController->get());
+        $pemesananController->create($tamuController->get(), $kamarController->get());
         require "app/views/components/footers.php";
         break;
     case "uTamu":
         $_SESSION['page'] = "Edit Guest";
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-       $tamuController->update($id);
+        $tamuController->update($id);
         require "app/views/components/footers.php";
         break;
     case "uUser":
@@ -128,14 +128,14 @@ switch ($action) {
         $_SESSION['page'] = "Edit Payment";
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-        $pembayaranController->update($id,$pemesananController->get());
+        $pembayaranController->update($id, $pemesananController->get());
         require "app/views/components/footers.php";
         break;
     case "uPemesanan":
         $_SESSION['page'] = "Edit Reservation";
         require "app/views/components/headers.php";
         require "app/views/components/navbars.php";
-        $pemesananController->update($id,$tamuController->get(),$kamarController->get());
+        $pemesananController->update($id, $tamuController->get(), $kamarController->get());
         require "app/views/components/footers.php";
         break;
     case "dashboard":
@@ -181,8 +181,9 @@ switch ($action) {
         $userController->login();
         echo "<script>showSweetAlert('Oops...', 'The email/username or password you entered is incorrect!!!');</script>";
         break;
-        case "logout":
-            $userController->logout();
+    case "logout":
+        $userController->logout();
+        break;
     default:
         $_SESSION['page'] = "Login";
         require "app/views/components/headers.php";
