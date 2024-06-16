@@ -27,39 +27,29 @@ class pemesananController
         return $data;
     }
 
-public function create($dataTamu, $dataKamar) {
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $tamu_id = $_POST['tamu_id'];
-        $kodeReservasi = $_POST['kodeReservasi'];
-        $kamar_id = $_POST['kamar_id'];
-        $tglCheckin = $_POST['checkin'];
-        $tglCheckout = $_POST['checkout'];
+    public function create($dataTamu,$dataKamar)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $tamu_id = $_POST['tamu_id'];
+            $kodeReservasi = $_POST['kodeReservasi'];
+            $kamar_id = $_POST['kamar_id'];
+            $tglCheckin = $_POST['checkin'];
+            $tglCheckout = $_POST['checkout'];
 
-        $this->pm->tamu_id = $tamu_id;
-        $this->pm->kodeReservasi = $kodeReservasi;
-        $this->pm->kamar_id = $kamar_id;
-        $this->pm->checkin = $tglCheckin;
-        $this->pm->checkout = $tglCheckout;
-
-        // Debug statements
-        echo "Data received: " . json_encode([
-            "tamu_id" => $tamu_id,
-            "kodeReservasi" => $kodeReservasi,
-            "kamar_id" => $kamar_id,
-            "checkin" => $tglCheckin,
-            "checkout" => $tglCheckout
-        ]) . "<br>";
-        exit();
-        if ($this->pm->createPemesanan()) {
-            echo "<script>window.location.href = 'index.php?action=rPemesanan';</script>";
+            $this->pm->tamu_id = $tamu_id;
+            $this->pm->kodeReservasi = $kodeReservasi;
+            $this->pm->kamar_id = $kamar_id;
+            $this->pm->checkin= $tglCheckin;
+            $this->pm->checkout= $tglCheckout;
+            if ($this->pm->createPemesanan()) {
+                echo "<script>window.location.href = 'index.php?action=rPemesanan';</script>";
+            } else {
+                echo "<script>alert('Terjadi kesalahan pada saat create!');</script>";
+            }
         } else {
-            echo "<script>alert('Terjadi kesalahan pada saat create!');</script>";
+            include "app/views/pemesanan/create.php";
         }
-    } else {
-        include "app/views/pemesanan/create.php";
     }
-}
-
     public function update($id,$dataTamu,$dataKamar)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
