@@ -1,7 +1,6 @@
  <!--**********************************
         Scripts
     ***********************************-->
-
  <script src="app/views/assets/plugins/common/common.min.js"></script>
  <script src="app/views/assets/js/custom.min.js"></script>
  <script src="app/views/assets/js/settings.js"></script>
@@ -66,34 +65,32 @@
  </script>
 
  <script>
-    document.querySelector(".sweet-confirm").onclick = function (event) {
-    event.preventDefault();
-    var linkUrl = this.getAttribute('href');
-    swal({
-      title: "Are you sure to delete?",
-      text: "You will not be able to recover this imaginary file!!",
-      icon: "warning",
-      buttons: {
-        cancel: "Cancel",
-        confirm: {
-          text: "Yes, delete it!!",
-          value: true,
-          visible: true,
-          className: "confirm-button",
-          closeModal: true
-        }
-      },
-      dangerMode: true,
-    })
-      .then((willDelete) => {
-        if (willDelete) {
-            window.location.href = linkUrl;
-        } else {
+     document.querySelector(".sweet-confirm").onclick = function(event) {
+         event.preventDefault();
+         var linkUrl = this.getAttribute('href');
+         swal({
+                 title: "Are you sure to delete?",
+                 text: "You will not be able to recover this imaginary file!!",
+                 icon: "warning",
+                 buttons: {
+                     cancel: "Cancel",
+                     confirm: {
+                         text: "Yes, delete it!!",
+                         value: true,
+                         visible: true,
+                         className: "confirm-button",
+                         closeModal: true
+                     }
+                 },
+                 dangerMode: true,
+             })
+             .then((willDelete) => {
+                 if (willDelete) {
+                     window.location.href = linkUrl;
+                 } else {
 
-          swal("Cancelled", "Your imaginary file is safe!", "error");
-        }
-      });
-  };
-   </script>
-
- 
+                     swal("Cancelled", "Your imaginary file is safe!", "error");
+                 }
+             });
+     };
+ </script>
