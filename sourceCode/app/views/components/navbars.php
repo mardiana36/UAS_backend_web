@@ -1,4 +1,3 @@
-
 <!--*******************
         Preloader start
  ********************-->
@@ -28,7 +27,7 @@
                 <b class="logo-abbr"><img src="" alt=""></b>
                 <span class="logo-compact"> <img src="" alt=""></span>
                 <span class="brand-title">
-                    <h4 style="font-size:30px; font-weight: bolder; color: #fff;" >BOOKING</h4>
+                    <h4 style="font-size:30px; font-weight: bolder; color: #fff;">BOOKING</h4>
                 </span>
             </a>
         </div>
@@ -45,7 +44,7 @@
 
             <div class="nav-control">
                 <div class="hamburger">
-                    <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    <span class="toggle-icon"><i class="fas fa-bars"></i></span>
                 </div>
             </div>
             <div class="header-right">
@@ -210,13 +209,13 @@
                 <li class="nav-label">Dashboard</li>
                 <li>
                     <a href="index.php?action=dashboard">
-                        <i class="icon-speedometer"></i><span class="nav-text">Dashboard</span>
+                        <i class="fas fa-chart-line"></i><span class="nav-text">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-label">Apps</li>
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="icon-user menu-icon"></i> <span class="nav-text">User</span>
+                        <i class="fas fa-user menu-icon"></i> <span class="nav-text">User</span>
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="index.php?action=rUser">User</a></li>
@@ -225,7 +224,7 @@
                 </li>
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="ion-android-people menu-icon"></i> <span class="nav-text">Guest</span>
+                        <i class="fas fa-users menu-icon"></i> <span class="nav-text">Guest</span>
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="index.php?action=rTamu">Guest</a></li>
@@ -234,7 +233,7 @@
                 </li>
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="icon-wallet menu-icon"></i> <span class="nav-text">Payment</span>
+                        <i class="fas fa-wallet menu-icon"></i> <span class="nav-text">Payment</span>
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="index.php?action=rPembayaran">Payment</a></li>
@@ -243,7 +242,7 @@
                 </li>
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="ion-ios-book menu-icon"></i> <span class="nav-text">Reservation</span>
+                        <i class="fas fa-book menu-icon"></i> <span class="nav-text">Reservation</span>
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="index.php?action=rPemesanan">Reservation</a></li>
@@ -252,7 +251,7 @@
                 </li>
                 <li>
                     <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                        <i class="icon-home menu-icon"></i> <span class="nav-text">Room</span>
+                        <i class="fas fa-home menu-icon"></i> <span class="nav-text">Room</span>
                     </a>
                     <ul aria-expanded="false">
                         <li><a href="index.php?action=rInfokamar">Room</a></li>
